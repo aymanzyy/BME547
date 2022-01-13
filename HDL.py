@@ -1,5 +1,5 @@
 def get_input():
-    print("Enter  HDL")
+    print("My Program: Enter something please")
     choice = input("Enter your choice: ")
     return choice
     
@@ -18,18 +18,4 @@ def driver():
     x = get_input()
     message = check_HDL(x)
     printer(message)
-
-
-def interface():
-    print("My Program")
-    print("Options:")
-    print('3 - HDL option')
-    print("9 - Quit")
-    choice = input("Enter your choice: ")
-    if choice = 3:
-        driver()
-    while choice != 9
-        choice == input('Enter another choice: ')
-    return
-   
-interface()
+    
