@@ -10,4 +10,9 @@ def check_HDL(input):
         return('Borderline Low')
     else:
         return('Low')
-        
+
+def driver():
+    x = get_input()
+    message = check_HDL(x)
+    print(message)
+    
