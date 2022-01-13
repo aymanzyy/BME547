@@ -11,8 +11,11 @@ def check_HDL(input):
     else:
         return('Low')
 
+def printer(message):
+    print(message)
+    
 def driver():
     x = get_input()
     message = check_HDL(x)
-    print(message)
+    printer(message)
     
