@@ -11,6 +11,17 @@ def check_HDL(input):
     else:
         return('Low')
 
+def check_LDL(input):
+    if input < 130:
+        print('Normal')
+    elif input >= 130 and input <160:
+        print('Borderline High')
+    elif input >= 160 and input <190:
+        print('High')
+    elif input >= 190:
+        print("Very high")
+
+
 def printer(message):
     print(message)
     
@@ -19,16 +30,24 @@ def driver():
     message = check_HDL(x)
     printer(message)
 
+def ldl_driver():
+    x = get_input()
+    check_LDL(x)
+
 
 def interface():
     print("My Program")
     print("Options:")
     print('3 - HDL option')
+    print('5 - LDL option')
     print("9 - Quit")
     choice = input("Enter your choice: ")
-    if choice = 3:
+    if choice == 3:
         driver()
-    while choice != 9
+    elif choice ==5:
+        driver()
+
+    while choice != 9:
         choice == input('Enter another choice: ')
     return
    
