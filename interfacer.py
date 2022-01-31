@@ -50,5 +50,5 @@ def interface():
     while choice != 9:
         choice == input('Enter another choice: ')
     return
-   
-interface()
+if __name__ == "__main__":
+    interface()
