@@ -1,20 +1,28 @@
 def input_weight_entry():
     print("Enter patient weight in form of ## units (e.g., 105 lb)")
-    weight_input = input("Enter weight: ")
+    weight_input = raw_input("Enter weight: ")
     weight_in_kg = parse_weight_input(weight_input)
     print("The patient weight of {} kg will be stored "
           "in database.".format(weight_in_kg))
 
 
 def parse_weight_input(weight_input):
-    weight, units = weight_input.split(' ')
-    weight = int(weight)
-    if units == "lb":
+    #if weight_input.find(" ") == -1:
+    #    raise ArgumentError("Need a space")
+    weight, units = str(weight_input).split(' ')
+    weight = float(weight)
+    units = units.lower()
+    if units == "lb" or units == 'lbs':
         weight_kg = convert_lb_to_kg(weight)
     else:
         weight_kg = weight
     weight_kg = round(weight_kg)
     return weight_kg
+
+
+def add(a,b): 
+    c = a + b
+    return c
 
 
 def convert_lb_to_kg(weight_lb):
